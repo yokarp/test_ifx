@@ -1,1 +1,12 @@
-<p>monster works!</p>
+<div class="container">
+  <h1 style="text-align: center;">Monstruos</h1>
+  <div class="grid">
+    <div *ngFor="let monster of monsters" class="col-3">
+      <p-card header="{{monster.name}}" [style]="{'margin-bottom': '2em','background-color':'#150050','color':'white'}">
+        <div style="text-align: center">
+          <button pButton type="button" label="Detalles" class="p-button-raised p-button-rounded" (click)="detailMonster(monster.index)"></button>
+        </div>
+      </p-card>
+    </div>
+  </div>
+</div>
