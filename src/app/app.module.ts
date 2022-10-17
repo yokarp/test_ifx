@@ -13,6 +13,7 @@ import { MonsterDetailComponent } from './monster-detail/monster-detail.componen
 import { ButtonModule } from 'primeng/button';
 import { MonsterRacesComponent } from './monster-races/monster-races.component';
 import { CardModule } from 'primeng/card';
+import { MonsterRacesDetailComponent } from './monster-races-detail/monster-races-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CardModule } from 'primeng/card';
     HomeComponent,
     MonsterComponent,
     MonsterDetailComponent,
-    MonsterRacesComponent
+    MonsterRacesComponent,
+    MonsterRacesDetailComponent
   ],
   imports: [
     BrowserModule,

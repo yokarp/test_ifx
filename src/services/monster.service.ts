@@ -10,6 +10,7 @@ export class MonsterService {
 
   baseurl = environment.server_url;
   monsterSelected?:any;
+  raceSelected?:any;
 
   constructor(private http: HttpClient) { }
 
@@ -23,6 +24,10 @@ export class MonsterService {
 
   getMosterRaces(): Promise<any>{
     return this.http.get(this.baseurl + "races").toPromise();
+  }
+
+  getMosterRacesDetail(monster:string): Promise<any>{
+    return this.http.get(this.baseurl + "races/" + monster).toPromise();
   }
 
 }

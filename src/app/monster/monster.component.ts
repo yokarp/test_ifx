@@ -23,7 +23,6 @@ export class MonsterComponent implements OnInit {
 
   detailMonster(monsterIndex:string){
     this.mosterService.getMosterDetail(monsterIndex).then( res => {
-      console.log(res);
       this.mosterService.monsterSelected = res;
       this.router.navigateByUrl('monster-detail');
     }).catch( err => console.error(err));
