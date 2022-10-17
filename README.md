@@ -1,6 +1,9 @@
 # TestIfx
 
+https://stately-praline-c13c5c.netlify.app/home
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+
 
 ## Development server
 
