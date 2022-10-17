@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { MonsterService } from 'src/services/monster.service';
 
 @Component({
   selector: 'app-monster-detail',
@@ -7,9 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MonsterDetailComponent implements OnInit {
 
-  constructor() { }
+  monster?: any;
+
+  constructor(private monsterService:MonsterService, private router:Router) { }
 
   ngOnInit(): void {
+    this.monster = this.monsterService.monsterSelected;
+    if(this.monster === null || this.monster === undefined){
+      this.router.navigateByUrl('monster');
+    }
   }
 
 }

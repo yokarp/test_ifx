@@ -1,1 +1,65 @@
-<p>monster-detail works!</p>
+
+<div class="container centerMoster">
+  <p-card header="{{monster.name}}" [style]="{'margin-bottom': '2em','background-color':'#C9F2E0', 'max-width':'400px'}">
+    <div>
+      <div *ngIf="monster.actions != null" style="background-color: #DCBCCA; border-radius: 0.5em;">
+        <label style="font-weight: 600">Actions:</label>
+        <p *ngFor="let item of monster.actions; let i = index">
+          {{i+1}}. {{item.name}}
+        </p>
+      </div>
+      <p *ngIf="monster.alignment != null">
+        <label style="font-weight: 600">Alineation:</label>
+        {{monster.alignment}}
+      </p>
+      <p *ngIf="monster.armor_class != null">
+        <label style="font-weight: 600">Armor class:</label>
+        {{monster.armor_class | number}}
+      </p>
+      <p *ngIf="monster.challenge_rating!= null">
+        <label style="font-weight: 600">Change rating:</label>
+        {{monster.challenge_rating | number}}
+      </p>
+      <p *ngIf="monster.charisma != null">
+        <label style="font-weight: 600">Charisma:</label>
+        {{monster.charisma | number}}
+      </p>
+      <p *ngIf="monster.constitution != null">
+        <label style="font-weight: 600">Constitution:</label>
+        {{monster.constitution | number}}
+      </p>
+      <p *ngIf="monster.dexterity != null">
+        <label style="font-weight: 600">Dexterity:</label>
+        {{monster.dexterity | number}}
+      </p>
+      <p *ngIf="monster.hit_points != null">
+        <label style="font-weight: 600">Hit points:</label>
+        {{monster.hit_points | number}}
+      </p>
+      <p *ngIf="monster.intelligence != null">
+        <label style="font-weight: 600">Intelligence:</label>
+        {{monster.intelligence | number}}
+      </p>
+      <p *ngIf="monster.strength != null">
+        <label style="font-weight: 600">Strength:</label>
+        {{monster.strength | number}}
+      </p>
+      <p *ngIf="monster.languages != null">
+        <label style="font-weight: 600">Languages:</label>
+        {{monster.languages}}
+      </p>
+      <p *ngIf="monster.size != null">
+        <label style="font-weight: 600">Size:</label>
+        {{monster.size}}
+      </p>
+      <p *ngIf="monster.speed.walk != null">
+        <label style="font-weight: 600">Speed Walk:</label>
+        {{monster.speed.walk}}
+      </p>
+      <p *ngIf="monster.desc != null">
+        <label style="font-weight: 600">Description:</label>
+        {{monster.desc}}
+      </p>
+    </div>
+  </p-card>
+</div>
